@@ -26,7 +26,7 @@ namespace WebApplication7.Repository
             _context.Remove(race);
             return Save();
         }
-
+      
         public async Task<IEnumerable<Race>> GetAll()
         {
             return await _context.Races.ToListAsync();
