@@ -39,7 +39,7 @@ namespace WebApplication7.Controllers
                 return View(club);
             } 
             _clubRepository.Add(club);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index");        
         }
     }
 }
