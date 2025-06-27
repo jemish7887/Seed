@@ -1,26 +1,23 @@
 ﻿@using WebApplication7.Data.Enum
-@model Club
+@using WebApplication7.ViewModel
+@model CreateClubViewModel
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
-<form method="post" asp-action="Create">
+<form method="post" asp-action="Create" enctype="multipart/form-data">
     <div class="form-group">
         <label asp-for="Title">Title</label>
         <input asp-for="Title" class="form-control"  placeholder=" Title">
-       <span asp-validation-for="Title" class="tex-danger"></span>
+       <span asp-validation-for="Title" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Description">Description</label>
         <input asp-for="Description" class="form-control" placeholder="Description">
-        <span asp-validation-for="Description" class="tex-danger"></span>
+        <span asp-validation-for="Description" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="Image">Image</label>
-        <input asp-for="Image" class="form-control" placeholder="Image">
-        <span asp-validation-for="Image" class="tex-danger"></span>
-    </div>
+    
     <div class="form-group">
         <label asp-for="ClubCategory">Club Category</label>
 
@@ -34,17 +31,22 @@
     <div class="form-group">
         <label asp-for="Address.Street">street</label>
         <input asp-for="Address.Street" class="form-control" placeholder="Address">
-        <span asp-validation-for="Address.Street" class="tex-danger"></span>
+        <span asp-validation-for="Address.Street" class="text-danger"></span>
     </div> 
     <div class="form-group">
         <label asp-for="Address.City">City</label>
         <input asp-for="Address.City" class="form-control" placeholder="Address">
-        <span asp-validation-for="Address.City" class="tex-danger"></span>
+        <span asp-validation-for="Address.City" class="text-danger"></span>
     </div>  
     <div class="form-group">
         <label asp-for="Address.State">State</label>
         <input asp-for="Address.State" class="form-control" placeholder="Address">
-        <span asp-validation-for="Address.State" class="tex-danger"></span>
+        <span asp-validation-for="Address.State" class="text-danger"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="Image">Image</label>
+        <input asp-for="Image" type="file" class="form-control" placeholder="Image">
+        <span asp-validation-for="Image" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
